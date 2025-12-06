@@ -11,8 +11,6 @@ End-to-end deployment of reinforcement learning agent from simulation to embedde
 2. **Convert** model to TFLite with INT8 quantization (~50 KB)
 3. **Deploy** to STM32H743ZI2 using TensorFlow Lite Micro
 
----
-
 ## ✨ Key Features
 
 - Complete PPO implementation in TensorFlow
@@ -22,7 +20,6 @@ End-to-end deployment of reinforcement learning agent from simulation to embedde
 - Real-time inference (~10-15 ms per step)
 - UART communication for testing
 
----
 
 ## 🏗️ Architecture
 
@@ -34,7 +31,6 @@ Deployment:   .tflite → C Header → STM32 + TFLite Micro → Inference
                                    UART (Obs ↔ Actions)
 ```
 
----
 
 ## 📁 Project Structure
 
@@ -57,9 +53,7 @@ BipedalWalker-PPO-STM32/
     ├── main2.h                  # C++ interface
     └── model.h                  # TFLite model data
 ```
-
 ---
-
 ## 🚀 Quick Start
 
 ### Installation
@@ -122,7 +116,6 @@ python tflite_to_header.py tflite_models/actor_model_quantized.tflite model.h
 
 Creates `model.h` for STM32 project
 
----
 
 ## Testing Without Hardware
 
@@ -146,7 +139,6 @@ Visualizes robot walking for 3 episodes with real-time stats
 
 *Note: You can use different STM32 boards - adjust pins and peripherals accordingly.*
 
----
 
 ## Firmware Setup
 
@@ -177,8 +169,6 @@ like missing `.h` or `.cc` files. In that case, manually copy the
 missing files from https://github.com/tensorflow/tflite-micro to your 
 `tflm_tree/` folder.
 
----
-
 ### Add TFLite Micro Include Paths
 
 **Project Properties → C/C++ Build → Settings → MCU G++ Compiler → Include paths**
@@ -198,7 +188,6 @@ Add these paths:
 
 *See firmware source files for complete TFLite Micro implementation.*
 
----
 
 ### STM32CubeIDE Project Setup
 
@@ -209,7 +198,6 @@ Add these paths:
 
 *Adjust clock speed, UART pins, and peripherals based on your specific board.*
 
----
 
 ### Working with C++ in STM32 (Mixed C/C++ Project)
 
@@ -298,7 +286,6 @@ C++ uses name mangling (e.g., `MyModule_Init` becomes `_Z13MyModule_Initv`), mak
 
 Build project in STM32CubeIDE (Ctrl+B), then flash to board via Debug/Run.
 
----
 
 ### Test via Serial
 
@@ -312,7 +299,7 @@ Python sends observations → STM32 runs inference → returns actions
 
 ---
 
-## ⚠️ Troubleshooting
+## Troubleshooting
 
 **`No module named 'Box2D'`**
 ```bash
@@ -327,19 +314,19 @@ Verify all TFLite Micro include paths are added
 
 ---
 
-## 📝 Blog Post
+## Blog Post
 
 Read the detailed article on Medium: **[Coming Soon]**
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions welcome! Open issues or submit pull requests.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [OpenAI Gymnasium](https://gymnasium.farama.org/) - BipedalWalker environment
 - [TensorFlow Lite Micro](https://www.tensorflow.org/lite/microcontrollers) - MCU deployment
@@ -347,7 +334,7 @@ Contributions welcome! Open issues or submit pull requests.
 
 ---
 
-## 📧 Contact
+## Contact
 
 **Your Name**  
 [LinkedIn](https://www.linkedin.com/in/aditya-bangde-372447178/) | [Medium](https://medium.com/@adityabangde)
