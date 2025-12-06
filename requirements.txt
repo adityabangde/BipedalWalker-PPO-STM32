@@ -1,0 +1,32 @@
+# BipedalWalker PPO on STM32 - Requirements
+# Install in order to avoid dependency conflicts
+
+# Core Dependencies
+tensorflow>=2.10.0
+numpy>=1.23.0
+
+# Gymnasium (install core first, then Box2D separately)
+gymnasium>=0.28.0
+
+# Box2D Physics Engine (install separately for BipedalWalker)
+Box2D>=2.3.10
+
+# Rendering and Visualization
+pygame>=2.1.0
+pillow>=9.0.0
+
+# Serial Communication (for STM32 testing)
+pyserial>=3.5
+
+# Optional
+matplotlib>=3.5.0
+
+
+# Installation Instructions:
+# -------------------------
+# 1. Activate virtual environment
+# 2. Install in this order:
+#    pip install --upgrade gymnasium
+#    pip install Box2D
+#    pip install pygame
+#    pip install -r requirements.txt
