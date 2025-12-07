@@ -316,7 +316,7 @@ Verify all TFLite Micro include paths are added
 
 ## Blog Post
 
-Read the detailed article on Medium: **[Coming Soon]**
+Read the detailed article on Medium: (https://medium.com/@adityabangde/deploying-a-ppo-trained-bipedal-walker-on-an-stm32-from-reinforcement-learning-to-real-time-470ab3c54e92)
 
 ---
 
